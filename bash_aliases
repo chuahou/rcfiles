@@ -12,12 +12,13 @@ alias sudo="sudo "
 # make tree max depth 3 by default and exclude .git folder
 alias tree="tree -L 3 -I .git"
 
-# rcup
-RCUP_DIR=$DEV_DIR/kiwami/rcfiles
+# rcm
+RCM_DIR=$DEV_DIR/kiwami/rcfiles
 alias rcup="rcup -v"
-alias rcd="cd $RCUP_DIR"
-alias rcg="git -C $RCUP_DIR"
-alias rcgg="git -C $RCUP_DIR/.."
+alias rcd="cd $RCM_DIR"
+alias rcg="git -C $RCM_DIR"
+alias rcgg="git -C $RCM_DIR/.."
+alias rcpush="rcg push && rcgg add rcfiles && rcgg commit -m 'rcfiles: update'"
 
 # fun
 alias please="sudo"
