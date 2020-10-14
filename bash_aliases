@@ -13,8 +13,11 @@ alias sudo="sudo "
 alias tree="tree -L 3 -I .git"
 
 # rcup
+RCUP_DIR=$DEV_DIR/kiwami/rcfiles
 alias rcup="rcup -v"
-alias rcd="cd $DEV_DIR/kiwami/rcfiles"
+alias rcd="cd $RCUP_DIR"
+alias rcg="git -C $RCUP_DIR"
+alias rcgg="git -C $RCUP_DIR/.."
 
 # fun
 alias please="sudo"
