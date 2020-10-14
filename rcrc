@@ -1,2 +1,3 @@
 DOTFILES_DIRS="~/dev/kiwami/rcfiles"
 EXCLUDES="LICENSE README*"
+SYMLINK_DIRS="oh-my-zsh/custom/plugins/zsh-vim-mode"
