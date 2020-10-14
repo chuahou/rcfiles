@@ -1,0 +1,54 @@
+# default colours
+set default-bg "#101010"
+set default-fg "#beaf8a"
+
+# bar colours
+set statusbar-bg "#1b1b1b"
+set statusbar-fg "#beaf8a"
+set inputbar-bg  "#101010"
+set inputbar-fg  "#beaf8a"
+
+# completion colours
+set completion-bg           "#222222"
+set completion-fg           "#beaf8a"
+set completion-highlight-bg "#599797"
+set completion-highlight-fg "#222222"
+set completion-group-bg     "#1b1b1b"
+set completion-group-fg     "#cfbf9b"
+
+# notifications colours
+set notification-bg         "#beaf8a"
+set notification-fg         "#1b1b1b"
+set notification-error-bg   "#ff6d6d"
+set notification-error-fg   "#1b1b1b"
+set notification-warning-bg "#fff484"
+set notification-warning-fg "#1b1b1b"
+
+# highlighted text colours
+set highlight-color        "#599797"
+set highlight-active-color "#8f6089"
+
+# recolor colours
+set recolor               true
+set recolor-darkcolor     "#cfbf9b"
+set recolor-lightcolor    "#1b1b1b"
+set recolor-keephue       false
+set recolor-reverse-video true
+
+# search behaviour
+set incremental-search true
+
+# scrollbars
+set show-scrollbars true
+set scrollbar-bg    "#080808"
+set scrollbar-fg    "#beaf8a"
+
+# padding between pages
+set page-padding 10
+
+# C-6 to jump back in jump list like in vim
+map [normal]     <C-6> jumplist backward
+map [fullscreen] <C-6> jumplist backward
+
+# use main clipboard
+set selection-clipboard clipboard

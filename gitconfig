@@ -1,0 +1,7 @@
+[user]
+	email = human+github@chuahou.dev
+	name = Chua Hou
+[credential]
+	helper = cache
+[core]
+	editor = nvim
