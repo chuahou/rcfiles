@@ -1,3 +1,5 @@
+DEV_DIR=$HOME/dev
+
 # basic commands
 alias ls="ls --group-directories-first --color=tty"
 alias rm="rm -i"
@@ -10,8 +12,9 @@ alias sudo="sudo "
 # make tree max depth 3 by default and exclude .git folder
 alias tree="tree -L 3 -I .git"
 
-# make rcup verbose
+# rcup
 alias rcup="rcup -v"
+alias rcd="cd $DEV_DIR/kiwami/rcfiles"
 
 # fun
 alias please="sudo"
@@ -56,8 +59,8 @@ alias e="vi"
 
 # vimwiki shortcuts
 alias wiki="e +VimwikiIndex"
-alias wikimake="make -C ~/dev/knowledge all"
-alias wikipush="git -C ~/dev/knowledge push origin master"
+alias wikimake="make -C $DEV_DIR/knowledge all"
+alias wikipush="git -C $DEV_DIR/knowledge push origin master"
 alias wikip="wikimake && wikipush"
 
 # minimal vim
