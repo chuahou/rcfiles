@@ -49,12 +49,12 @@ font-2             = ${config.font-fix}
 line-size          = 2
 line-color         = ${self.foreground}
 tray-position      = right
-format-padding     = 2
+format-padding     = 1
 padding            = 1
 module-margin-left = 1
-modules-left       = fs battery
+modules-left       = battery fs mem cpu
 modules-center     = i3
-modules-right      =
+modules-right      = date
 
 [module/i3]
 ; behaviour
@@ -104,3 +104,31 @@ bar-capacity-width            = 4
 label-charging                = ac %percentage%% %{T3}⇡%{T-} %time%
 label-discharging             = dc %percentage%% %{T3}⇣%{T-} %time%
 label-full                    = ac FULL
+
+[module/cpu]
+type               = internal/cpu
+format             = cpu <label> [<bar-load>]
+bar-load-indicator = -
+bar-load-width     = 4
+bar-load-fill      = =
+bar-load-empty     = " "
+format-background  = ${colours.lmagenta}
+format-underline   = ${colours.magenta}
+format-padding     = 1
+
+[module/date]
+type              = internal/date
+date              = %a %Y-%m-%d
+time              = %H:%M:%S
+label             = %date% %time%
+format-background = ${colours.lwhite}
+format-underline  = ${colours.white}
+format-padding    = 1
+
+[module/mem]
+type              = internal/memory
+format            = <label>
+label             = mem %percentage_used%%
+format-background = ${colours.lgreen}
+format-underline  = ${colours.green}
+format-padding    = 1
