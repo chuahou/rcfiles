@@ -1,0 +1,62 @@
+[colours]
+gray0           = ${xrdb:i3ch.colour_gray0:#2E3440}
+gray1           = ${xrdb:i3ch.colour_gray1:#3B4252}
+gray2           = ${xrdb:i3ch.colour_gray2:#434C5E}
+gray3           = ${xrdb:i3ch.colour_gray3:#7B8394}
+gray4           = ${xrdb:i3ch.colour_gray4:#D8DEE9}
+gray5           = ${xrdb:i3ch.colour_gray5:#E5E9F0}
+gray6           = ${xrdb:i3ch.colour_gray6:#ECEFF4}
+gray7           = ${xrdb:i3ch.colour_gray7:#ECEFF4}
+blue            = ${xrdb:i3ch.colour_blue:#599797}
+cyan            = ${xrdb:i3ch.colour_cyan:#5C9FA8}
+green           = ${xrdb:i3ch.colour_green:#48874F}
+magenta         = ${xrdb:i3ch.colour_magenta:#8F6089}
+red             = ${xrdb:i3ch.colour_red:#D14949}
+white           = ${xrdb:i3ch.colour_white:#8C8C8C}
+yellow          = ${xrdb:i3ch.colour_yellow:#AFA75A}
+background      = ${self.gray0}
+background-alt  = ${self.gray1}
+background-alt2 = ${self.gray2}
+foreground      = ${self.gray5}
+foreground-alt  = ${self.gray4}
+foreground-alt2 = ${self.gray3}
+good            = ${self.green}
+caution         = ${self.yellow}
+bad             = ${self.red}
+other           = ${self.blue}
+
+[config]
+font       = Iosevka:pixelsize=13;2
+font-fixed = Iosevka Fixed:pixelsize=13;2
+
+[bar/main]
+width        = 100%
+height       = 30
+background   = ${colours.background}
+foreground   = ${colours.foreground}
+modules-left = i3
+font-0       = ${config.font}
+font-1       = ${config.font-fixed}
+
+[module/i3]
+; behaviour
+type            = internal/i3
+format          = <label-state> <label-mode>
+index-sort      = true
+wrapping-scroll = true
+; mode
+label-mode-padding    = 1
+label-mode-background = ${colours.red}
+; ws
+label-focused              = :%index%
+label-unfocused            = .%index%
+label-visible              = .%index%
+label-urgent               = !%index%
+label-focused-background   = ${colours.blue}
+label-unfocused-background = ${colours.background-alt}
+label-visible-background   = ${self.label-unfocused-background}
+label-urgent-background    = ${colours.red}
+label-focused-padding      = 1
+label-unfocused-padding    = ${self.label-focused-padding}
+label-visible-padding      = ${self.label-focused-padding}
+label-urgent-padding       = ${self.label-focused-padding}
