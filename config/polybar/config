@@ -134,3 +134,7 @@ label             = mem %percentage_used%%
 format-background = ${colours.lgreen}
 format-underline  = ${colours.green}
 format-padding    = 1
+
+[module/temperature]
+type     = internal/temperature
+interval = 2
