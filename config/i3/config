@@ -20,6 +20,7 @@ focus_follows_mouse no
 exec --no-startup-id compton --config $HOME/.config/compton.conf
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec --no-startup-id nm-applet
+exec --no-startup-id dropbox start -i
 
 ##### FROM XRESOURCES #####
 
