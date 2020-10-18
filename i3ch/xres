@@ -2,7 +2,6 @@
 
 ! #define files
 #include "colour"
-#include "icons"
 
 ! colours
 i3ch.colour_gray0:   COLOUR_GRAY0
@@ -16,27 +15,22 @@ i3ch.colour_gray7:   COLOUR_GRAY7
 i3ch.colour_red:     COLOUR_RED
 i3ch.colour_green:   COLOUR_GREEN
 i3ch.colour_yellow:  COLOUR_YELLOW
-! i3ch.colour_orange:  COLOUR_ORANGE
 i3ch.colour_blue:    COLOUR_BLUE
 i3ch.colour_magenta: COLOUR_MAGENTA
-! i3ch.colour_violet:  COLOUR_VIOLET
 i3ch.colour_cyan:    COLOUR_CYAN
 i3ch.colour_white:   COLOUR_WHITE
 
-! workspace names, we use convenient #define syntax inspired by Regolith
-! 2-step QUOTE() QUOTE_() definition is needed due to #define semantics
-! QUOTE(x) expands x in QUOTE_(x), which then prepends #
-#define BAR_FONT "Iosevka Fixed Medium 12"
-#define QUOTE(x) QUOTE_(x)
-#define QUOTE_(x) #x
-#define WORKSPACE(INDEX, NAME, COLOUR) INDEX:<span font_desc=BAR_FONT> NAME </span><span foreground=COLOUR font_desc=ICONS_FONT>ICON_WORKSPACE</span><span font_desc=BAR_FONT> </span>
-i3ch.ws1: WORKSPACE(1,  I,    QUOTE(COLOUR_YELLOW))
-i3ch.ws2: WORKSPACE(2,  II,   QUOTE(COLOUR_RED))
-i3ch.ws3: WORKSPACE(3,  III,  QUOTE(COLOUR_GREEN))
-i3ch.ws4: WORKSPACE(4,  IV,   QUOTE(COLOUR_BLUE))
-i3ch.ws5: WORKSPACE(5,  V,    QUOTE(COLOUR_YELLOW))
-i3ch.ws6: WORKSPACE(6,  VI,   QUOTE(COLOUR_RED))
-i3ch.ws7: WORKSPACE(7,  VII,  QUOTE(COLOUR_GREEN))
-i3ch.ws8: WORKSPACE(8,  VIII, QUOTE(COLOUR_BLUE))
-i3ch.ws9: WORKSPACE(9,  IX,   QUOTE(COLOUR_WHITE))
-i3ch.ws0: WORKSPACE(10, X,    QUOTE(COLOUR_GRAY0))
+! font
+i3ch.font: Iosevka Medium 14
+
+! workspace names
+i3ch.ws1: 1
+i3ch.ws2: 2
+i3ch.ws3: 3
+i3ch.ws4: 4
+i3ch.ws5: 5
+i3ch.ws6: 6
+i3ch.ws7: 7
+i3ch.ws8: 8
+i3ch.ws9: 9
+i3ch.ws0: 10

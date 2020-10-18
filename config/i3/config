@@ -54,11 +54,12 @@ set_from_resource $colour_white   i3ch.colour_white "#FFFFFF"
 ##### APPEARANCE #####
 
 # font
-font Iosevka Fixed Medium 13
+set_from_resource $font i3ch.font Iosevka Medium 14
+font pango:$font
 
 # disable titlebar
-default_border          pixel 1
-default_floating_border pixel 1
+default_border          pixel 2
+default_floating_border pixel 2
 
 # gaps
 gaps inner 12
@@ -74,27 +75,6 @@ client.unfocused        $colour_gray0 $colour_gray1 $colour_gray4 \
 	$colour_gray1 $colour_gray0
 client.urgent           $colour_gray0 $colour_red   $colour_gray7 \
 	$colour_red   $colour_gray0
-
-##### BAR #####
-
-bar {
-	position top
-	font     pango:Iosevka Fixed Medium 13
-	height   30
-
-	tray_output             primary
-	strip_workspace_numbers yes
-
-	colors {
-		background $colour_gray0
-		statusline $colour_gray5
-
-		focused_workspace  $colour_gray1 $colour_gray1 $colour_gray6
-		active_workspace   $colour_gray1 $colour_gray1 $colour_gray3
-		inactive_workspace $colour_gray0 $colour_gray0 $colour_gray3
-		urgent_workspace   $colour_red   $colour_red   $colour_gray7
-	}
-}
 
 ##### BINDINGS #####
 
@@ -196,7 +176,7 @@ bindsym $mod+Shift+r reload
 bindsym $mod+Ctrl+r  restart
 
 # terminate session
-mode "End Session [mod+l] logout [mod+p] shutdown [mod+r] restart" {
+mode "End Session  [mod+l] logout  [mod+p] shutdown  [mod+r] restart" {
 	bindsym $mod+l exec i3-msg exit
 	bindsym $mod+p exec systemctl shutdown
 	bindsym $mod+r exec systemctl reboot
@@ -206,5 +186,5 @@ mode "End Session [mod+l] logout [mod+p] shutdown [mod+r] restart" {
 	bindsym Escape       mode "default"
 	bindsym Return       mode "default"
 }
-bindsym $mod+Shift+e mode "End Session [mod+l] logout [mod+p] shutdown [mod+r] restart"
-bindsym $mod+Shift+p mode "End Session [mod+l] logout [mod+p] shutdown [mod+r] restart"
+bindsym $mod+Shift+e mode "End Session  [mod+l] logout  [mod+p] shutdown  [mod+r] restart"
+bindsym $mod+Shift+p mode "End Session  [mod+l] logout  [mod+p] shutdown  [mod+r] restart"
