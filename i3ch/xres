@@ -4,21 +4,28 @@
 #include "colour"
 
 ! colours
-i3ch.colour_gray0:   COLOUR_GRAY0
-i3ch.colour_gray1:   COLOUR_GRAY1
-i3ch.colour_gray2:   COLOUR_GRAY2
-i3ch.colour_gray3:   COLOUR_GRAY3
-i3ch.colour_gray4:   COLOUR_GRAY4
-i3ch.colour_gray5:   COLOUR_GRAY5
-i3ch.colour_gray6:   COLOUR_GRAY6
-i3ch.colour_gray7:   COLOUR_GRAY7
-i3ch.colour_red:     COLOUR_RED
-i3ch.colour_green:   COLOUR_GREEN
-i3ch.colour_yellow:  COLOUR_YELLOW
-i3ch.colour_blue:    COLOUR_BLUE
-i3ch.colour_magenta: COLOUR_MAGENTA
-i3ch.colour_cyan:    COLOUR_CYAN
-i3ch.colour_white:   COLOUR_WHITE
+i3ch.colour_gray0:    COLOUR_GRAY0
+i3ch.colour_gray1:    COLOUR_GRAY1
+i3ch.colour_gray2:    COLOUR_GRAY2
+i3ch.colour_gray3:    COLOUR_GRAY3
+i3ch.colour_gray4:    COLOUR_GRAY4
+i3ch.colour_gray5:    COLOUR_GRAY5
+i3ch.colour_gray6:    COLOUR_GRAY6
+i3ch.colour_gray7:    COLOUR_GRAY7
+i3ch.colour_red:      COLOUR_RED
+i3ch.colour_green:    COLOUR_GREEN
+i3ch.colour_yellow:   COLOUR_YELLOW
+i3ch.colour_blue:     COLOUR_BLUE
+i3ch.colour_magenta:  COLOUR_MAGENTA
+i3ch.colour_cyan:     COLOUR_CYAN
+i3ch.colour_white:    COLOUR_WHITE
+i3ch.colour_lred:     COLOUR_LRED
+i3ch.colour_lgreen:   COLOUR_LGREEN
+i3ch.colour_lyellow:  COLOUR_LYELLOW
+i3ch.colour_lblue:    COLOUR_LBLUE
+i3ch.colour_lmagenta: COLOUR_LMAGENTA
+i3ch.colour_lcyan:    COLOUR_LCYAN
+i3ch.colour_lwhite:   COLOUR_LWHITE
 
 ! font
 i3ch.font: Iosevka Medium 14
