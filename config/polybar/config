@@ -91,6 +91,8 @@ format-mounted-padding    = 1
 [module/battery]
 type                          = internal/battery
 time-format                   = %H:%M
+battery                       = BAT0
+adapter                       = AC
 format-charging-padding       = 1
 format-discharging-padding    = ${self.format-charging-padding}
 format-full-padding           = ${self.format-charging-padding}
