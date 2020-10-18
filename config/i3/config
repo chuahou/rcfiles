@@ -6,10 +6,11 @@ set $mod Mod1
 set $alt Mod4
 
 # applications with options
-set $terminal --no-startup-id alacritty
-set $browser  firefox
-set $rofi     rofi
-set $filemgr  nautilus --new-window
+set $terminal   --no-startup-id alacritty
+set $browser    firefox
+set $rofi       rofi
+set $filemgr    nautilus --new-window
+set $screenshot --no-startup-id flameshot gui
 
 # do not follow mouse
 focus_follows_mouse no
@@ -171,6 +172,8 @@ bindsym $mod+space        exec $rofi -show drun
 bindsym $mod+Shift+space  exec $rofi -show run
 bindsym $mod+alt+space    exec $rofi -show find
 bindsym $mod+Shift+n      exec $filemgr
+bindsym $mod+p            exec $screenshot
+bindsym Print             exec $screenshot
 
 # reload i3 config / restart
 bindsym $mod+Shift+r reload
