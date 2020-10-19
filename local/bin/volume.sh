@@ -40,8 +40,8 @@ mkdir -p $(dirname $SINK_FILE)
 # get current sink
 SINKS=$(pactl list short sinks)
 SINK=$(grep RUNNING <<< $SINKS | awk '{print $1}' | head -n 1)
-[ -z $SINK ] && SINK=$(head -n 1 <<< $SINKS | awk '{print $1}')
 [ -z $SINK ] && SINK=$(cat $SINK_FILE 2> /dev/null || true)
+[ -z $SINK ] && SINK=$(head -n 1 <<< $SINKS | awk '{print $1}')
 echo $SINK > $SINK_FILE
 
 # if no args, just print status
@@ -74,7 +74,9 @@ case $1 in
 		SINKS=("${SINKS[@]:1}")
 
 		# change sink
-		set_sink "${SINKS[$i]}"
+		SINK="${SINKS[$i]}"
+		set_sink $SINK
+		echo $SINK > $SINK_FILE
 		;;
 	volup) # volume up
 		pactl set-sink-volume $SINK +5%
