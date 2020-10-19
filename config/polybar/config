@@ -55,7 +55,7 @@ module-margin-left = 1
 enable-ipc         = true
 modules-left       = battery fs mem cpu
 modules-center     = i3
-modules-right      = cpufreq_ipc cpufreq date
+modules-right      = sound_ipc sound cpufreq_ipc cpufreq date
 
 [module/i3]
 ; behaviour
@@ -155,4 +155,22 @@ scroll-up         = sudo cpufreq-plugin increase; polybar-msg hook cpufreq_ipc 1
 scroll-down       = sudo cpufreq-plugin decrease; polybar-msg hook cpufreq_ipc 1
 format-background = ${colours.lred}
 format-underline  = ${colours.red}
+format-padding    = 1
+
+[module/sound]
+type     = custom/script
+exec     = polybar-msg hook sound_ipc 1
+label    =
+interval = 1
+
+[module/sound_ipc]
+type              = custom/ipc
+hook-0            = volume.sh
+click-left        = volume.sh sink; polybar-msg hook sound_ipc 1
+click-middle      = volume.sh mute; polybar-msg hook sound_ipc 1
+click-right       = pavucontrol & disown
+scroll-up         = volume.sh volup; polybar-msg hook sound-ipc 1
+scroll-down       = volume.sh voldn; polybar-msg hook sound-ipc 1
+format-background = ${colours.lyellow}
+format-underline  = ${colours.yellow}
 format-padding    = 1
