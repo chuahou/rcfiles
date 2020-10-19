@@ -55,7 +55,7 @@ module-margin-left = 1
 enable-ipc         = true
 modules-left       = battery fs mem cpu
 modules-center     = i3
-modules-right      = sound_ipc sound cpufreq_ipc cpufreq date
+modules-right      = nordvpn sound_ipc sound cpufreq_ipc cpufreq date
 
 [module/i3]
 ; behaviour
@@ -174,3 +174,13 @@ scroll-down       = volume.sh voldn; polybar-msg hook sound-ipc 1
 format-background = ${colours.lyellow}
 format-underline  = ${colours.yellow}
 format-padding    = 1
+
+[module/nordvpn]
+type              = custom/script
+exec              = echo vpn $(nordvpn status | sed -n 's/Current server: \([a-z0-9]\+\).nordvpn.com.*$/\1/p')
+format-background = ${colours.lmagenta}
+format-underline  = ${colours.magenta}
+format-padding    = 1
+click-left        = nordvpn c
+click-middle      = nordvpn c uk
+click-right       = nordvpn d
