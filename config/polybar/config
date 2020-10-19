@@ -54,7 +54,7 @@ padding            = 1
 module-margin-left = 1
 modules-left       = battery fs mem cpu
 modules-center     = i3
-modules-right      = date
+modules-right      = cpufreq date
 
 [module/i3]
 ; behaviour
@@ -138,3 +138,17 @@ format-padding    = 1
 [module/temperature]
 type     = internal/temperature
 interval = 2
+
+[module/cpufreq]
+type              = custom/script
+exec              = cpufreq-plugin
+exec-if           = command -v cpufreq-plugin
+format            = <label>
+label             = %output%
+interval          = 1
+click-left        = sudo cpufreq-plugin gov
+scroll-up         = sudo cpufreq-plugin increase 500
+scroll-down       = sudo cpufreq-plugin decrease 500
+format-background = ${colours.lred}
+format-underline  = ${colours.red}
+format-padding    = 1
