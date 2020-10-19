@@ -195,3 +195,8 @@ mode "End Session  [mod+l] logout  [mod+p] shutdown  [mod+r] restart" {
 }
 bindsym $mod+Shift+e mode "End Session  [mod+l] logout  [mod+p] shutdown  [mod+r] restart"
 bindsym $mod+Shift+p mode "End Session  [mod+l] logout  [mod+p] shutdown  [mod+r] restart"
+
+# multimedia controls
+bindsym XF86AudioLowerVolume exec volume.sh voldn && polybar-msg hook sound_ipc 1
+bindsym XF86AudioRaiseVolume exec volume.sh volup && polybar-msg hook sound_ipc 1
+bindsym XF86AudioMute exec volume.sh mute && polybar-msg hook sound_ipc 1
