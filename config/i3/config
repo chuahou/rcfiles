@@ -15,13 +15,16 @@ set $screenshot --no-startup-id flameshot gui
 # do not follow mouse
 focus_follows_mouse no
 
+# wallpaper
+set $wallpaper $HOME/.config/i3/wallpaper.jpg
+
 ##### STARTUP #####
 
 exec --no-startup-id compton --config $HOME/.config/compton.conf
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec --no-startup-id nm-applet
 exec --no-startup-id dropbox start -i
-exec_always --no-startup-id feh --bg-fill $HOME/.config/i3/wallpaper.jpg
+exec_always --no-startup-id feh --bg-fill $wallpaper
 
 ##### FROM XRESOURCES #####
 
@@ -200,3 +203,6 @@ bindsym $mod+Shift+p mode "End Session  [mod+l] logout  [mod+p] shutdown  [mod+r
 bindsym XF86AudioLowerVolume exec volume.sh voldn && polybar-msg hook sound_ipc 1
 bindsym XF86AudioRaiseVolume exec volume.sh volup && polybar-msg hook sound_ipc 1
 bindsym XF86AudioMute exec volume.sh mute && polybar-msg hook sound_ipc 1
+
+# lock screen
+bindsym $mod+shift+Escape exec i3lock -c 222222 -f
