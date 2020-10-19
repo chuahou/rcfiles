@@ -176,7 +176,7 @@ bindsym $mod+Return       exec $terminal
 bindsym $mod+Shift+Return exec $browser
 bindsym $mod+space        exec $rofi -show drun
 bindsym $mod+Shift+space  exec $rofi -show run
-bindsym $mod+alt+space    exec $rofi -show find
+bindsym $mod+Ctrl+space   exec $rofi -show window
 bindsym $mod+Shift+n      exec $filemgr
 bindsym $mod+p            exec $screenshot
 bindsym Print             exec $screenshot
