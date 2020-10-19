@@ -52,9 +52,10 @@ tray-position      = right
 format-padding     = 1
 padding            = 1
 module-margin-left = 1
+enable-ipc         = true
 modules-left       = battery fs mem cpu
 modules-center     = i3
-modules-right      = cpufreq date
+modules-right      = cpufreq_ipc cpufreq date
 
 [module/i3]
 ; behaviour
@@ -140,15 +141,18 @@ type     = internal/temperature
 interval = 2
 
 [module/cpufreq]
-type              = custom/script
-exec              = cpufreq-plugin
-exec-if           = command -v cpufreq-plugin
-format            = <label>
-label             = %output%
-interval          = 1
-click-left        = sudo cpufreq-plugin gov
-scroll-up         = sudo cpufreq-plugin increase 500
-scroll-down       = sudo cpufreq-plugin decrease 500
+type     = custom/script
+exec     = polybar-msg hook cpufreq_ipc 1
+exec-if  = command -v cpufreq-plugin
+interval = 60
+label    =
+
+[module/cpufreq_ipc]
+type              = custom/ipc
+hook-0            = cpufreq-plugin
+click-left        = sudo cpufreq-plugin gov; polybar-msg hook cpufreq_ipc 1
+scroll-up         = sudo cpufreq-plugin increase; polybar-msg hook cpufreq_ipc 1
+scroll-down       = sudo cpufreq-plugin decrease; polybar-msg hook cpufreq_ipc 1
 format-background = ${colours.lred}
 format-underline  = ${colours.red}
 format-padding    = 1
