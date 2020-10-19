@@ -205,4 +205,7 @@ bindsym XF86AudioRaiseVolume exec volume.sh volup && polybar-msg hook sound_ipc 
 bindsym XF86AudioMute exec volume.sh mute && polybar-msg hook sound_ipc 1
 
 # lock screen
-bindsym $mod+shift+Escape exec i3lock -c 222222 -f
+bindsym $mod+Shift+Escape exec i3lock -c 222222 -f
+
+# fallback xrandr command to recover
+bindsym $mod+Shift+Ctrl+x exec xrandr --auto
