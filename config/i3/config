@@ -77,10 +77,10 @@ gaps outer 2
 #	indicator     child_border
 client.focused          $colour_red   $colour_gray2 $colour_gray7 \
 	$colour_blue  $colour_red
-client.focused_inactive $colour_gray0 $colour_gray1 $colour_gray4 \
-	$colour_gray1 $colour_gray0
-client.unfocused        $colour_gray0 $colour_gray1 $colour_gray4 \
-	$colour_gray1 $colour_gray0
+client.focused_inactive $colour_gray4 $colour_gray1 $colour_gray4 \
+	$colour_gray1 $colour_gray4
+client.unfocused        $colour_gray4 $colour_gray1 $colour_gray4 \
+	$colour_gray1 $colour_gray4
 client.urgent           $colour_gray0 $colour_red   $colour_gray7 \
 	$colour_red   $colour_gray0
 
