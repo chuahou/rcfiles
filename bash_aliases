@@ -74,28 +74,3 @@ alias plan="mvim ~/Plan.txt"
 
 # check git script
 alias cgit="check-git"
-
-# cpufreq-set loop functions
-# CPU_COUNT calculated by https://stackoverflow.com/a/6481016/12372506
-
-# cpufreq-set max freq to $1
-function cpufreq-setmaxfreq()
-{
-	CPU_COUNT=$(grep -c ^processor /proc/cpuinfo)
-	for (( i=0; i<$CPU_COUNT; i++ )); do
-		sudo cpufreq-set -c "$i" -r -u "$1" || break # break loop if one fails
-	done
-}
-
-# cpufreq-set governor to $1
-function cpufreq-setgov()
-{
-	CPU_COUNT=$(grep -c ^processor /proc/cpuinfo)
-	for (( i=0; i<$CPU_COUNT; i++ )); do
-		sudo cpufreq-set -c "$i" -r -g "$1" || break # break loop if one fails
-	done
-}
-
-# presets
-alias cpufreq-highpower="cpufreq-setmaxfreq 4.5GHz && cpufreq-setgov performance"
-alias cpufreq-quiet="cpufreq-setmaxfreq 2.4GHz && cpufreq-setgov powersave"
