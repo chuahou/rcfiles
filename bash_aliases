@@ -52,6 +52,7 @@ alias log="git log"
 alias l="git log --oneline --decorate"
 alias l1="l -n 1"
 alias lshow="git log -n 1"
+alias add-remote="git remote add origin https://github.com/chuahou/$(basename $(realpath .))"
 
 # vim
 if $(command -v nvim > /dev/null); then
