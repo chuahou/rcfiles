@@ -131,7 +131,7 @@ format-padding    = 1
 [module/mem]
 type              = internal/memory
 format            = <label>
-label             = mem %percentage_used%%
+label             = mem %gb_used% [%percentage_used%%]
 format-background = ${colours.lgreen}
 format-underline  = ${colours.green}
 format-padding    = 1
