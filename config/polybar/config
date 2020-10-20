@@ -63,14 +63,15 @@ type            = internal/i3
 format          = <label-state> <label-mode>
 index-sort      = true
 wrapping-scroll = true
+strip-wsnumbers = true
 ; mode
 label-mode-padding    = 1
 label-mode-background = ${colours.red}
 ; ws
-label-focused              = %{T2}:%index%%{T-}
-label-unfocused            = %{T2}.%index%%{T-}
-label-visible              = %{T2}.%index%%{T-}
-label-urgent               = %{T2}!%index%%{T-}
+label-focused              = %{T2}:%name%%{T-}
+label-unfocused            = %{T2}.%name%%{T-}
+label-visible              = %{T2}.%name%%{T-}
+label-urgent               = %{T2}!%name%%{T-}
 label-focused-underline    = ${colours.gray5}
 label-focused-background   = ${colours.blue}
 label-unfocused-background = ${colours.background-alt}
