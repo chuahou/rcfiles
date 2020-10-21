@@ -25,7 +25,7 @@ configuration {
 	case-sensitive: false;
 	cycle: true;
 	sidebar-mode: false;
-	matching: "fuzzy";
+	matching: "normal";
 	tokenize: true;
 	threads: 0;
 	scroll-method: 1;
