@@ -52,3 +52,6 @@ map [fullscreen] <C-6> jumplist backward
 
 # use main clipboard
 set selection-clipboard clipboard
+
+# recents
+set show-recent 3
