@@ -325,9 +325,9 @@ command! -range Align <line1>,<line2>s/\s\+/ /g | noh | <line1>,<line2>Tab/ /l0
 
 " vimwiki configuration
 let g:vimwiki_list = [{
-			\ 'path'             : '~/Projects/knowledge/wiki/',
-			\ 'path_html'        : '~/Projects/knowledge/docs/',
-			\ 'template_path'    : '~/Projects/knowledge/templates/',
+			\ 'path'             : '~/dev/knowledge/wiki/',
+			\ 'path_html'        : '~/dev/knowledge/docs/',
+			\ 'template_path'    : '~/dev/knowledge/templates/',
 			\ 'template_default' : 'template',
 			\ 'template_ext'     : '.html',
 			\ 'nested_syntaxes'  : {
@@ -336,7 +336,7 @@ let g:vimwiki_list = [{
 				\ 'clang': 'c',
 				\ 'scala': 'scala',
 				\ 'haskell': 'haskell'},
-			\ 'custom_wiki2html' : '~/Projects/knowledge/wiki2html.sh',
+			\ 'custom_wiki2html' : '~/dev/knowledge/wiki2html.sh',
 			\ }]
 let g:vimwiki_global_ext = 0
 noremap <Leader>wo :VimwikiGoto<Space>
