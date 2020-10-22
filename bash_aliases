@@ -9,6 +9,9 @@ alias wget="wget -c"
 # enable aliases in sudo
 alias sudo="sudo "
 
+# edit as root
+alias sudoe="EDITOR=nvim sudo -e"
+
 # make tree max depth 3 by default and exclude .git folder
 alias tree="tree -L 3 -I .git"
 
