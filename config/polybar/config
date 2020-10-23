@@ -53,7 +53,7 @@ format-padding     = 1
 padding            = 1
 module-margin-left = 1
 enable-ipc         = true
-modules-left       = battery fs fshd mem cpu
+modules-left       = battery fs fshd mem maxtemp cpu
 modules-center     = i3
 modules-right      = nordvpn sound_ipc sound cpufreq_ipc cpufreq date
 
@@ -193,3 +193,12 @@ format-padding    = 1
 click-left        = nordvpn c
 click-middle      = nordvpn c uk
 click-right       = nordvpn d
+
+[module/maxtemp]
+type              = custom/script
+exec              = sensors | sed -n 's/+\([0-9]\+\)\.[0-9]°C.*/\1/p' | rev | cut -d ' ' -f 1 | rev | sort -r | head -n 1
+label = temp %output%°C
+format-background = ${colours.lred}
+format-underline  = ${colours.red}
+format-padding    = 1
+interval          = 1
