@@ -119,7 +119,7 @@ label-full                    = ac FULL
 
 [module/cpu]
 type               = internal/cpu
-format             = cpu <label> [<bar-load>]
+format             = cpu <label>
 bar-load-indicator = -
 bar-load-width     = 4
 bar-load-fill      = =
@@ -130,7 +130,7 @@ format-padding     = 1
 
 [module/date]
 type              = internal/date
-date              = %a %Y-%m-%d
+date              = %a %m/%d
 time              = %H:%M:%S
 label             = %date% %time%
 format-background = ${colours.lwhite}
@@ -140,7 +140,7 @@ format-padding    = 1
 [module/mem]
 type              = internal/memory
 format            = <label>
-label             = mem %gb_used% [%percentage_used%%]
+label             = mem %gb_used%
 format-background = ${colours.lgreen}
 format-underline  = ${colours.green}
 format-padding    = 1
@@ -158,7 +158,7 @@ label    =
 
 [module/cpufreq_ipc]
 type              = custom/ipc
-hook-0            = cpufreq-plugin
+hook-0            = cpufreq-plugin | sed 's/powersave/save/' | sed 's/performance/perf/'
 click-left        = sudo cpufreq-plugin gov; polybar-msg hook cpufreq_ipc 1
 scroll-up         = sudo cpufreq-plugin increase 500; polybar-msg hook cpufreq_ipc 1
 scroll-down       = sudo cpufreq-plugin decrease 500; polybar-msg hook cpufreq_ipc 1
