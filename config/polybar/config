@@ -53,7 +53,7 @@ format-padding     = 1
 padding            = 1
 module-margin-left = 1
 enable-ipc         = true
-modules-left       = battery fs mem cpu
+modules-left       = battery fs fshd mem cpu
 modules-center     = i3
 modules-right      = nordvpn sound_ipc sound cpufreq_ipc cpufreq date
 
@@ -85,9 +85,17 @@ label-urgent-padding       = ${self.label-focused-padding}
 [module/fs]
 type                      = internal/fs
 mount-0                   = /
-label-mounted             = fs %free%
+label-mounted             = fs %used% / %total%
 format-mounted-underline  = ${colours.blue}
 format-mounted-background = ${colours.lblue}
+format-mounted-padding    = 1
+
+[module/fshd]
+type                      = internal/fs
+mount-0                   = /home/sgepk/hd
+label-mounted             = hd %used% / %total%
+format-mounted-underline  = ${colours.yellow}
+format-mounted-background = ${colours.lyellow}
 format-mounted-padding    = 1
 
 [module/battery]
