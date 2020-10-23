@@ -202,3 +202,4 @@ format-background = ${colours.lred}
 format-underline  = ${colours.red}
 format-padding    = 1
 interval          = 1
+click-left        = alacritty -e watch -n 2 sensors & disown
