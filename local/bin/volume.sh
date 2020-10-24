@@ -8,19 +8,19 @@ set -e
 
 # get sink name of sink #$1
 get_sink_name () {
-	pactl list sinks | grep "Sink #$1" -A 3 | \
+	pactl list sinks | grep "Sink #$1$" -A 3 | \
 		sed -n 's/^.*Description: \([^ ]\+\).*$/\1/p'
 }
 
 # get sink volume of sink #$1
 get_sink_vol () {
-	pactl list sinks | grep "Sink #$1" -A 10 | \
+	pactl list sinks | grep "Sink #$1$" -A 10 | \
 		sed -n 's/^.*Volume:.*\s\([0-9]\+\)%.*$/\1/p'
 }
 
 # get mute status of sink #$1
 get_sink_mute () {
-	pactl list sinks | grep "Sink #$1" -A 9 | \
+	pactl list sinks | grep "Sink #$1$" -A 9 | \
 		sed -n 's/^.*Mute: \(yes\|no\).*$/\1/p'
 }
 
