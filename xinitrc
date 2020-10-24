@@ -27,5 +27,8 @@ do
 	fi
 done
 
+# set caps lock as ctrl
+setxkbmap -layout us -option ctrl:nocaps
+
 # run i3
 exec i3
