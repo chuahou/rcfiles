@@ -92,7 +92,7 @@ format-mounted-padding    = 1
 
 [module/fshd]
 type                      = internal/fs
-mount-0                   = /home/sgepk/hd
+mount-0                   = /mnt/hd
 label-mounted             = hd %used% / %total%
 format-mounted-underline  = ${colours.yellow}
 format-mounted-background = ${colours.lyellow}
