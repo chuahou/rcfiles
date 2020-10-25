@@ -215,7 +215,7 @@ bindsym XF86MonBrightnessUp exec light -A 10
 bindsym XF86MonBrightnessDown exec light -U 10
 
 # lock screen
-bindsym $mod+Shift+Escape exec i3lock -c 222222 -f
+bindsym $mod+Shift+Escape exec lock.sh --color=222222 --show-failed-attempts
 
 # fallback xrandr command to recover
 bindsym $mod+Shift+Ctrl+x exec xrandr --auto
