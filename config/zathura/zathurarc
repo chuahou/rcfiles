@@ -29,7 +29,7 @@ set highlight-color        "#599797"
 set highlight-active-color "#8f6089"
 
 # recolor colours
-set recolor               true
+set recolor               false
 set recolor-darkcolor     "#cfbf9b"
 set recolor-lightcolor    "#1b1b1b"
 set recolor-keephue       false
