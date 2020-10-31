@@ -20,13 +20,18 @@ set $wallpaper $HOME/.config/i3/wallpaper.jpg
 
 ##### STARTUP #####
 
+# appearance
 exec --no-startup-id compton --config $HOME/.config/compton.conf
+exec --no-startup-id dunst
+exec_always --no-startup-id feh --bg-fill $wallpaper
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+
+# connectivity
 exec --no-startup-id nm-applet
 exec --no-startup-id blueman-applet
-exec --no-startup-id dunst
+
+# user programs
 exec --no-startup-id dropbox start -i
-exec_always --no-startup-id feh --bg-fill $wallpaper
 
 ##### FROM XRESOURCES #####
 
