@@ -32,6 +32,7 @@ exec --no-startup-id blueman-applet
 
 # user programs
 exec --no-startup-id dropbox start -i
+exec --no-startup-id fcitx
 
 ##### FROM XRESOURCES #####
 
