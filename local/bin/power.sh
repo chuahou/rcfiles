@@ -10,7 +10,7 @@ NOTIFY_LEVEL=10
 SHUTDOWN_LEVEL=5
 
 # delay in seconds before shutting down
-SHUTDOWN_DELAY=15
+SHUTDOWN_DELAY=30
 
 # interval to check in seconds
 LOOP_INTERVAL=60
@@ -35,6 +35,7 @@ while true; do
 			"Shutting down in $SHUTDOWN_DELAY seconds!" && \
 		paplay /usr/share/sounds/freedesktop/stereo/phone-incoming-call.oga && \
 		sleep $SHUTDOWN_DELAY && \
+		[ $(cat /sys/class/power_supply/BAT0/status) = "Discharging" ] && \
 		systemctl poweroff
 
 	sleep $LOOP_INTERVAL
