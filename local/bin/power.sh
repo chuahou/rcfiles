@@ -17,6 +17,12 @@ LOOP_INTERVAL=60
 
 while true; do
 
+	sleep $LOOP_INTERVAL
+
+	# if charging, skip
+	[ ! $(cat /sys/class/power_supply/BAT0/status) = "Discharging" ] && \
+		continue
+
 	# get battery level
 	CURRENT_LEVEL=$(upower -i $(upower -e | grep battery) | \
 		sed -n 's/.*percentage:\s*\([0-9]\+\)%/\1/p')
@@ -39,7 +45,5 @@ while true; do
 		sleep $SHUTDOWN_DELAY && \
 		[ $(cat /sys/class/power_supply/BAT0/status) = "Discharging" ] && \
 		systemctl poweroff
-
-	sleep $LOOP_INTERVAL
 
 done
