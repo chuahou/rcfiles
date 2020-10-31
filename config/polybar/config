@@ -145,10 +145,6 @@ format-background = ${colours.lgreen}
 format-underline  = ${colours.green}
 format-padding    = 1
 
-[module/temperature]
-type     = internal/temperature
-interval = 2
-
 [module/cpufreq]
 type     = custom/script
 exec     = polybar-msg hook cpufreq_ipc 1
@@ -196,7 +192,7 @@ click-right       = nordvpn d
 
 [module/maxtemp]
 type              = custom/script
-exec              = sensors | sed -n 's/+\([0-9]\+\)\.[0-9]°C.*/\1/p' | rev | cut -d ' ' -f 1 | rev | sort -r | head -n 1
+exec              = sensors | sed -n 's/^[^(]*+\([0-9]\+\)\.[0-9]°C.*/\1/p' | rev | cut -d ' ' -f 1 | rev | sort -r | head -n 1
 label = temp %output%°C
 format-background = ${colours.lred}
 format-underline  = ${colours.red}
