@@ -21,7 +21,7 @@ set $wallpaper $HOME/.config/i3/wallpaper.jpg
 ##### STARTUP #####
 
 # appearance
-exec --no-startup-id compton --config $HOME/.config/compton.conf
+exec --no-startup-id compton --config $HOME/.config/i3/compton.conf
 exec --no-startup-id dunst
 exec_always --no-startup-id feh --bg-fill $wallpaper
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
