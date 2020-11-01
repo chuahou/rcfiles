@@ -1,4 +1,4 @@
 DOTFILES_DIRS="~/dev/kiwami/rcfiles"
-EXCLUDES="LICENSE README*"
+EXCLUDES="LICENSE README* gen_script.sh standalone.sh"
 TAGS="i3 vimplug zsh"
 SYMLINK_DIRS="oh-my-zsh/custom/plugins/zsh-vim-mode"
