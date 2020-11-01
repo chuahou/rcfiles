@@ -35,8 +35,8 @@ exec --no-startup-id dropbox start -i
 exec --no-startup-id fcitx
 exec --no-startup-id /usr/lib/x86_64-linux-gnu/polkit-mate/polkit-mate-authentication-agent-1
 
-# power management
-exec --no-startup-id $HOME/.local/bin/power.sh
+# startup scripts
+exec --no-startup-id $HOME/.config/i3/startup.sh
 
 ##### FROM XRESOURCES #####
 
