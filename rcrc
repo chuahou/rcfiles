@@ -1,3 +1,4 @@
 DOTFILES_DIRS="~/dev/kiwami/rcfiles"
 EXCLUDES="LICENSE README*"
+TAGS="i3 vimplug zsh"
 SYMLINK_DIRS="oh-my-zsh/custom/plugins/zsh-vim-mode"
