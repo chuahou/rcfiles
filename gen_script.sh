@@ -9,6 +9,7 @@ set -e
 
 cd $(dirname $0)
 RCRC=./rcrc rcup -t none -g > standalone.sh
-sed -i "s@$HOME@\$HOME@g" standalone.sh
+sed -i "s@$(realpath $(dirname $0))@\$(realpath \$(dirname \$0))@" standalone.sh
+sed -i "s@$HOME@\$HOME@" standalone.sh
 chmod +x standalone.sh
 cd -
