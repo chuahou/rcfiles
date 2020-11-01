@@ -230,3 +230,6 @@ bindsym $mod+Shift+Escape exec lock.sh --show-failed-attempts
 
 # fallback xrandr command to recover
 bindsym $mod+Shift+Ctrl+x exec xrandr --auto
+
+# redo xconfig
+bindsym $mod+Shift+Ctrl+z exec xconfig.sh
