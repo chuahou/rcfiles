@@ -15,7 +15,7 @@ PIC_PATH=$HOME/.local/share/lock.sh/
 # https://www.reddit.com/r/i3wm/comments/7se3lr/i3_wont_run_a_script_i_wrote/
 mkdir -p "$PIC_PATH"
 scrot "$PIC_PATH"/screen.png
-convert "$PIC_PATH"/screen.png -blur 0x10 "$PIC_PATH"/blur.png
+convert "$PIC_PATH"/screen.png -blur 0x15 "$PIC_PATH"/blur.png
 
 # disable notifications, and
 # forward arguments passed to this script to i3lock
