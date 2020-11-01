@@ -21,7 +21,7 @@ alias rcup="rcup -v"
 alias rcd="cd $RCM_DIR"
 alias rcg="git -C $RCM_DIR"
 alias rcgg="git -C $RCM_DIR/.."
-alias rcpush="$RCM_DIR/gen_script.sh && rcg commit -m 'standalone.sh: update' && rcg push && rcgg add rcfiles && rcgg commit -m 'rcfiles: update'"
+alias rcpush="$RCM_DIR/gen_script.sh && rcg add standalone.sh && rcg commit -m 'standalone.sh: update'; rcg push && rcgg add rcfiles && rcgg commit -m 'rcfiles: update'"
 
 # fun
 alias please="sudo"
