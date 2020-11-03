@@ -28,8 +28,3 @@ done
 
 # set caps lock as ctrl
 setxkbmap -layout us -option ctrl:nocaps
-
-# start fcitx
-export GTK_IM_MODULE=fcitx
-export QT_IM_MODULE=fcitx
-export XMODIFIERS=@im=fcitx
