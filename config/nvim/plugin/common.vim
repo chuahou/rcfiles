@@ -40,7 +40,7 @@ endfunction
 function s:MaybeMake()
 	if executable("make")
 		if filereadable("Makefile")
-			!make
+			call jobstart('make')
 		endif
 	endif
 endfunction
