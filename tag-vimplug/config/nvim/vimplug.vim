@@ -61,8 +61,8 @@ function s:VimwikiAutoTOCWrite()
 
 	" write and convert if changed
 	if &mod
-		exec 'write'
-		exec 'Vimwiki2HTML'
+		silent exec 'write'
+		silent exec 'Vimwiki2HTML'
 	endif
 endfunction
 augroup VimwikiCustom
