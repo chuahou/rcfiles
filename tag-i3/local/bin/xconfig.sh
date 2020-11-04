@@ -28,3 +28,6 @@ done
 
 # set caps lock as ctrl
 setxkbmap -layout us -option ctrl:nocaps
+
+# disable X power saving
+xset s off -dpms
