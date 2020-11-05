@@ -111,6 +111,7 @@ bindsym $mod+Shift+k  move  up
 bindsym $mod+Shift+l  move  right
 bindsym $mod+Shift+t  focus mode_toggle
 bindsym $mod+a        focus parent
+bindsym $mod+Shift+a  focus child
 
 # workspace navigation
 bindsym $mod+1 workspace number $ws1
