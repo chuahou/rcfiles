@@ -120,3 +120,10 @@ export LESS="-Xr"
 # vi mode
 bindkey -rpM viins '^[^['
 export KEYTIMEOUT=1
+
+# set editor
+if command -v nvim > /dev/null; then
+	export EDITOR=nvim
+else
+	export EDITOR=vim
+fi
