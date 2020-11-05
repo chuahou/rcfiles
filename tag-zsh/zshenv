@@ -1,3 +1,5 @@
+# aliases should work even in noninteractive shells (generally not recommended,
+# but I want them to work in e.g. vim)
 source $HOME/.bash_aliases
 
 # add directories to path if they exist
@@ -6,3 +8,4 @@ grep -v '^#' $HOME/.config/path.list | while read DIR; do
 	[ -d "$HOME/$DIR" ] && new_paths+=$HOME/$DIR
 done
 path=(${new_paths:|path} $path)
+export PATH
