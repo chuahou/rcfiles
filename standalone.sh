@@ -77,6 +77,7 @@ handle_file_ln "$(realpath $(dirname $0))/config/nvim/plugin/common.vim" "$HOME/
 handle_file_ln "$(realpath $(dirname $0))/config/nvim/plugin/control.vim" "$HOME/.config/nvim/plugin/control.vim"
 handle_file_ln "$(realpath $(dirname $0))/config/nvim/plugin/spdx.vim" "$HOME/.config/nvim/plugin/spdx.vim"
 handle_file_ln "$(realpath $(dirname $0))/config/nvim/plugin/vimcompat.vim" "$HOME/.config/nvim/plugin/vimcompat.vim"
+handle_file_ln "$(realpath $(dirname $0))/config/path.list" "$HOME/.config/path.list"
 handle_file_ln "$(realpath $(dirname $0))/config/user-dirs.dirs" "$HOME/.config/user-dirs.dirs"
 handle_file_ln "$(realpath $(dirname $0))/ghci" "$HOME/.ghci"
 handle_file_ln "$(realpath $(dirname $0))/profile" "$HOME/.profile"
