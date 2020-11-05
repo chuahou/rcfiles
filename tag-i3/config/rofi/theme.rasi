@@ -27,7 +27,7 @@
 	cbg-alt2: @cgray2;
 	cfg: @cgray5;
 
-	font: "Ioslabka 15";
+	font: "Iosevka 15";
 	padding: 2;
 
 	background-color: @cbg;
@@ -61,7 +61,7 @@
 	margin: 0 2 0 1ch;
 }
 #entry {
-	font: "Ioslabka Light 14";
+	font: "Iosevka Light 14";
 }
 
 #listview {
@@ -87,7 +87,7 @@
 
 #element {
 	padding: 7 5 7 8;
-	font: "Ioslabka 14";
+	font: "Iosevka 14";
 	border: 0 solid 0 solid 0 solid 3 solid;
 }
 #element normal.normal {

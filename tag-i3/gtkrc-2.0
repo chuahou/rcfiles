@@ -4,7 +4,7 @@
 include "/home/sgepk/.gtkrc-2.0.mine"
 gtk-theme-name="oomox-i3ch"
 gtk-icon-theme-name="oomox-i3ch"
-gtk-font-name="Ioslabka Expanded 11"
+gtk-font-name="Iosevka Expanded 11"
 gtk-cursor-theme-name="Pop"
 gtk-cursor-theme-size=1
 gtk-toolbar-style=GTK_TOOLBAR_ICONS
