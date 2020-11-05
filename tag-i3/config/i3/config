@@ -74,7 +74,7 @@ set_from_resource $colour_white   i3ch.colour_white "#FFFFFF"
 ##### APPEARANCE #####
 
 # font
-set_from_resource $font i3ch.font Iosevka Medium 14
+set_from_resource $font i3ch.font Ioslabka Medium 14
 font pango:$font
 
 # disable titlebar

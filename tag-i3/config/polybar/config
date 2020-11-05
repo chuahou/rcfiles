@@ -33,9 +33,9 @@ bad             = ${self.red}
 other           = ${self.blue}
 
 [config]
-font     = Iosevka:pixelsize=12;3
-font-big = Iosevka:pixelsize=13;2
-font-fix = Iosevka Fixed:pixelsize=12;3
+font     = Ioslabka:pixelsize=12;3
+font-big = Ioslabka:pixelsize=13;2
+font-fix = Ioslabka:pixelsize=12;3
 
 [bar/main]
 width              = 100%

@@ -52,7 +52,7 @@ i3ch.colour_lcyan:    COLOUR_LCYAN
 i3ch.colour_lwhite:   COLOUR_LWHITE
 
 ! font
-i3ch.font: Iosevka Medium 14
+i3ch.font: Ioslabka 14
 
 ! workspace names
 i3ch.ws1: 1
