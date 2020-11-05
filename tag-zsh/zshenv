@@ -1,1 +1,8 @@
 source $HOME/.bash_aliases
+
+# add directories to path if they exist
+new_paths=()
+grep -v '^#' $HOME/.config/path.list | while read DIR; do
+	[ -d "$HOME/$DIR" ] && new_paths+=$HOME/$DIR
+done
+path+=${new_paths:|path}
