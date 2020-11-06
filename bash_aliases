@@ -5,6 +5,8 @@ alias ls="ls --group-directories-first --color=tty"
 alias rm="rm -i"
 alias q="exit"
 alias wget="wget -c"
+alias open="xdg-open"
+alias o="open"
 
 # enable aliases in sudo
 alias sudo="sudo "
@@ -76,3 +78,12 @@ alias plan="mvim ~/Plan.txt"
 
 # check git script
 alias cgit="check-git"
+
+# disown by default when running some applications
+_run_and_disown () {
+	$@ & disown
+}
+_disown_progs=( zathura meld gitg nautilus xdg-open )
+for prog in "${_disown_progs[@]}"; do
+	alias $prog="_run_and_disown $prog"
+done
