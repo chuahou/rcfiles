@@ -24,8 +24,8 @@ call plug#begin('~/.local/share/nvim/plugged')
 	Plug 'vim-airline/vim-airline-themes'
 
 	" RST Plugins
-	Plug 'Rykka/InstantRst', {'do': 'pip3 install --user https://github.com/Rykka/instant-rst.py/archive/master.zip'}
-	Plug 'ossobv/vim-rst-tables-py3', {'do': 'pip3 install --user vim_bridge3'}
+	Plug 'Rykka/InstantRst', {'do': 'pip3 install --user https://github.com/Rykka/instant-rst.py/archive/master.zip', 'for': 'rst'}
+	Plug 'ossobv/vim-rst-tables-py3', {'do': 'pip3 install --user vim_bridge3', 'for': 'rst'}
 call plug#end()
 
 " custom command for aligning by spaces
