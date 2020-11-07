@@ -10,7 +10,6 @@ endif
 " list of vim-plug plugins
 call plug#begin('~/.local/share/nvim/plugged')
 	" language plugins
-	Plug 'octol/vim-cpp-enhanced-highlight'
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 	Plug 'neovimhaskell/haskell-vim'
 
