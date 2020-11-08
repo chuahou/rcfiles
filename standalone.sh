@@ -81,6 +81,7 @@ handle_file_ln "$(realpath $(dirname $0))/config/path.list" "$HOME/.config/path.
 handle_file_ln "$(realpath $(dirname $0))/config/user-dirs.dirs" "$HOME/.config/user-dirs.dirs"
 handle_file_ln "$(realpath $(dirname $0))/ghci" "$HOME/.ghci"
 handle_file_ln "$(realpath $(dirname $0))/profile" "$HOME/.profile"
+handle_file_ln "$(realpath $(dirname $0))/quiltrc" "$HOME/.quiltrc"
 handle_file_ln "$(realpath $(dirname $0))/rcrc" "$HOME/.rcrc"
 handle_file_ln "$(realpath $(dirname $0))/stack/config.yaml" "$HOME/.stack/config.yaml"
 handle_file_ln "$(realpath $(dirname $0))/vimrc" "$HOME/.vimrc"
