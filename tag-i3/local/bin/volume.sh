@@ -6,6 +6,10 @@
 
 set -e
 
+# file to store currently active sink
+SINK_FILE=$HOME/.local/share/volume.sh/sink
+mkdir -p $(dirname $SINK_FILE)
+
 # get sink name of sink #$1
 get_sink_name () {
 	pactl list sinks | grep "Sink #$1$" -A 3 | \
@@ -31,18 +35,34 @@ set_sink () {
 	for input in $(pactl list short sink-inputs | awk '{print $1}'); do
 		pactl move-sink-input $input $1
 	done
+	echo $1 > $SINK_FILE
 }
 
-# file to store currently active sink
-SINK_FILE=$HOME/.local/share/volume.sh/sink
-mkdir -p $(dirname $SINK_FILE)
+# returns currently chosen sink
+current_sink () {
+	local sinks=$(pactl list short sinks)
+
+	# get running sink
+	local sink=$(grep RUNNING <<< $sinks | awk '{print $1}' | head -n 1)
+
+	# if no running sink, then get from our file
+	if [ -z $sink ]; then
+		sink=$(cat $SINK_FILE 2> /dev/null || true)
+		set_sink $sink
+	fi
+
+	# if this fails or the previously set sink isn't in the sink list, get the
+	# first in the sink list
+	if [ -z $sink ] || [ -z $(get_sink_name $sink) ]; then
+		sink=$(head -n 1 <<< $sinks | awk '{print $1}')
+		set_sink $sink
+	fi
+
+	echo $sink
+}
 
 # get current sink
-SINKS=$(pactl list short sinks)
-SINK=$(grep RUNNING <<< $SINKS | awk '{print $1}' | head -n 1)
-[ -z $SINK ] && SINK=$(cat $SINK_FILE 2> /dev/null || true)
-[ -z $SINK ] && SINK=$(head -n 1 <<< $SINKS | awk '{print $1}')
-echo $SINK > $SINK_FILE
+SINK=$(current_sink)
 
 # if no args, just print status
 if [ $# -eq 0 ]; then
@@ -58,7 +78,7 @@ fi
 case $1 in
 	sink) # change sink
 		# convert SINKS to array
-		SINKS=$(awk '{print $1}' <<< $SINKS)
+		SINKS=$(pactl list short sinks | awk '{print $1}')
 		IFS=$'\n' SINKS=($SINKS)
 
 		# get index of current SINK
@@ -76,7 +96,6 @@ case $1 in
 		# change sink
 		SINK="${SINKS[$i]}"
 		set_sink $SINK
-		echo $SINK > $SINK_FILE
 		;;
 	volup) # volume up
 		pactl set-sink-volume $SINK +5%
