@@ -6,10 +6,6 @@
 
 set -e
 
-# file to store currently active sink
-SINK_FILE=$HOME/.local/share/volume.sh/sink
-mkdir -p $(dirname $SINK_FILE)
-
 # get sink name of sink #$1
 get_sink_name () {
 	pactl list sinks | grep "Sink #$1$" -A 3 | \
@@ -35,30 +31,12 @@ set_sink () {
 	for input in $(pactl list short sink-inputs | awk '{print $1}'); do
 		pactl move-sink-input $input $1
 	done
-	echo $1 > $SINK_FILE
 }
 
 # returns currently chosen sink
 current_sink () {
-	local sinks=$(pactl list short sinks)
-
-	# get running sink
-	local sink=$(grep RUNNING <<< $sinks | awk '{print $1}' | head -n 1)
-
-	# if no running sink, then get from our file
-	if [ -z $sink ]; then
-		sink=$(cat $SINK_FILE 2> /dev/null || true)
-		set_sink $sink
-	fi
-
-	# if this fails or the previously set sink isn't in the sink list, get the
-	# first in the sink list
-	if [ -z $sink ] || [ -z $(get_sink_name $sink) ]; then
-		sink=$(head -n 1 <<< $sinks | awk '{print $1}')
-		set_sink $sink
-	fi
-
-	echo $sink
+	local sinkname=$(pacmd stat | awk -F': ' '/^Default sink name/{print $2}')
+	pactl list short sinks | awk "/$sinkname/{print \$1}"
 }
 
 # get current sink
