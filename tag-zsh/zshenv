@@ -9,3 +9,7 @@ grep -v '^#' $HOME/.config/path.list | while read DIR; do
 done
 path=(${new_paths:|path} $path)
 export PATH
+
+# debian packaging variables
+export DEBEMAIL="human+github@chuahou.dev"
+export DEBFULLNAME="Chua Hou"
