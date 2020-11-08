@@ -5,3 +5,4 @@
 bin
 .cargo/bin
 .cabal/bin
+.ghcup/bin
