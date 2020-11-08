@@ -30,3 +30,7 @@ setxkbmap -layout us -option ctrl:nocaps
 
 # disable X power saving
 xset s off -dpms
+
+# disable stream restore module if loaded
+[ $(pactl list short modules | grep module-stream-restore -c || true) -gt 0 ] &&
+	pactl unload-module module-stream-restore

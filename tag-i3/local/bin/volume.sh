@@ -24,18 +24,6 @@ get_sink_mute () {
 		sed -n 's/^.*Mute: \(yes\|no\).*$/\1/p'
 }
 
-# disable stream restore module
-# if this is left enabled, switching default sink does nothing as streams are
-# reassigned to their last used sink
-disable_stream_restore () {
-	local module
-	module=module-stream-restore
-	set +e
-	[ $(pactl list short modules | grep $module -c) -gt 0 ] &&
-		pactl unload-module $module
-	set -e
-}
-
 # set default sink to sink #$1 and move existing sink inputs
 set_sink () {
 	local input
@@ -43,7 +31,6 @@ set_sink () {
 	for input in $(pactl list short sink-inputs | awk '{print $1}'); do
 		pactl move-sink-input $input $1
 	done
-	disable_stream_restore
 }
 
 # file to store currently active sink
