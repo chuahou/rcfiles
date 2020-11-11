@@ -1,7 +1,7 @@
 [user]
 	email = human+github@chuahou.dev
 	name = Chua Hou
-	signingkey = B0798E72
+	signingKey = 6DB0D3F28472C6554FDDF4E98F0601E2B0798E72
 [credential]
 	helper = cache
 [core]
