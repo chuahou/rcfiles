@@ -8,7 +8,7 @@ set $alt Mod4
 # applications with options
 set $terminal   --no-startup-id alacritty
 set $browser    firefox
-set $rofi       rofi
+set $rofi       XDG_DATA_DIRS=/var/lib/snapd/desktop:$XDG_DATA_DIRS rofi
 set $filemgr    nautilus --new-window
 set $screenshot --no-startup-id flameshot gui
 
