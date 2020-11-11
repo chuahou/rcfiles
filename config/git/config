@@ -1,7 +1,10 @@
 [user]
 	email = human+github@chuahou.dev
 	name = Chua Hou
+	signingkey = B0798E72
 [credential]
 	helper = cache
 [core]
 	editor = nvim
+[commit]
+	gpgsign = true
