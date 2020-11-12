@@ -61,6 +61,9 @@ alias l="git log --oneline --decorate"
 alias l1="l -n 1"
 alias lshow="git log -n 1"
 
+# git convert https GitHub remote URL to ssh
+alias gh2ssh="git remote set-url origin \$(git remote get-url origin | sed 's/https:\/\/\(chuahou@\)\?github.com\/chuahou\/\([^\.]*\)\(\.git\)\?/git@github.com:chuahou\/\2/')"
+
 # vim
 if $(command -v nvim > /dev/null); then
 	alias vi="nvim" # use nvim if present
