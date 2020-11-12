@@ -25,6 +25,9 @@ alias rcg="git -C $RCM_DIR"
 alias rcgg="git -C $RCM_DIR/.."
 alias rcpush="$RCM_DIR/gen_script.sh && rcg add standalone.sh && rcg commit -m 'standalone.sh: update'; rcg push && rcgg add rcfiles && rcgg commit -m 'rcfiles: update'"
 
+# set lifetime by default to 10m for ssh-add
+alias ssh-add="ssh-add -t 10m"
+
 # fun
 alias please="sudo"
 alias fucking="sudo"
