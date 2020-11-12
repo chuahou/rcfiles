@@ -1,7 +1,0 @@
-templates:
-  params:
-    author-email:    human+github@chuahou.dev
-    author-name:     Chua Hou
-    copyright:       2020 Chua Hou
-    github-username: chuahou
-system-ghc: true
