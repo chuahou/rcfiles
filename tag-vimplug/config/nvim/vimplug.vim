@@ -11,7 +11,7 @@ endif
 call plug#begin('~/.local/share/nvim/plugged')
 	" language plugins
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
-	Plug 'neovimhaskell/haskell-vim'
+	Plug 'neovimhaskell/haskell-vim', {'for': 'haskell'}
 
 	" alignment
 	Plug 'godlygeek/tabular'
