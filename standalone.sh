@@ -80,6 +80,7 @@ handle_file_ln "$(realpath $(dirname $0))/config/nvim/plugin/vimcompat.vim" "$HO
 handle_file_ln "$(realpath $(dirname $0))/config/path.list" "$HOME/.config/path.list"
 handle_file_ln "$(realpath $(dirname $0))/config/user-dirs.dirs" "$HOME/.config/user-dirs.dirs"
 handle_file_ln "$(realpath $(dirname $0))/ghci" "$HOME/.ghci"
+handle_file_ln "$(realpath $(dirname $0))/local/share/texmacs-notes.desktop" "$HOME/.local/share/texmacs-notes.desktop"
 handle_file_ln "$(realpath $(dirname $0))/profile" "$HOME/.profile"
 handle_file_ln "$(realpath $(dirname $0))/quiltrc" "$HOME/.quiltrc"
 handle_file_ln "$(realpath $(dirname $0))/rcrc" "$HOME/.rcrc"
