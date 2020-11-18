@@ -5,7 +5,9 @@ alias ls="ls --group-directories-first --color=tty"
 alias rm="rm -i"
 alias q="exit"
 alias wget="wget -c"
-alias open="xdg-open"
+open () {
+	for i in "$@"; do xdg-open $i; done
+}
 alias o="open"
 
 # enable aliases in sudo
