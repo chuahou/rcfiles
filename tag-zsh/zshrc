@@ -130,5 +130,6 @@ fi
 
 # zsh-autosuggestions configuration
 ZSH_AUTOSUGGEST_STRATEGY=(history completion) # search history then autocomplete
+ZSH_AUTOSUGGEST_COMPLETION_IGNORE="* apt *" # exclude apt commands
 bindkey '^ ' autosuggest-accept # <C-Space> to accept
 bindkey '^N' autosuggest-accept # vim-esque <C-N> to accept
