@@ -130,5 +130,5 @@ fi
 
 # zsh-autosuggestions configuration
 ZSH_AUTOSUGGEST_STRATEGY=(history completion) # search history then autocomplete
-bindkey '^\t' autosuggest-accept              # <C-Tab> to accept
-bindkey '^N'  autosuggest-accept              # vim-esque <C-N> to accept
+bindkey '^ ' autosuggest-accept # <C-Space> to accept
+bindkey '^N' autosuggest-accept # vim-esque <C-N> to accept
