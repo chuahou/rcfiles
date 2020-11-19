@@ -18,6 +18,9 @@ focus_follows_mouse no
 # wallpaper
 set $wallpaper $HOME/.config/i3/wallpaper.jpg
 
+# blueman window always floating
+for_window [class="Blueman-manager"] floating enable
+
 ##### STARTUP #####
 
 # appearance
