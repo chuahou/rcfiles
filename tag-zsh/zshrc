@@ -127,3 +127,7 @@ if command -v nvim > /dev/null; then
 else
 	export EDITOR=vim
 fi
+
+# zsh-autosuggestions configuration
+ZSH_AUTOSUGGEST_STRATEGY=(history completion) # search history then autocomplete
+bindkey '^\t' autosuggest-accept              # <C-Tab> to accept
