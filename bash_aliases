@@ -74,6 +74,10 @@ elif $(command -v vim > /dev/null); then
 fi
 alias e="vi"
 
+# emacs
+alias emacs="emacs --color=8"
+alias org="emacs ~/Dropbox/org/index.org"
+
 # vimwiki shortcuts
 alias wiki="e +VimwikiIndex"
 alias wikimake="make -C $DEV_DIR/knowledge all"
