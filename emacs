@@ -18,6 +18,8 @@
 (setq org-todo-keywords
       '((sequence "HOLD" "TRIAGE" "TODO" "NEXT" "|" "DONE")))
 (setq org-link-frame-setup '((file . find-file)))
+(setq org-agenda-span 5)
+(setq org-agenda-start-on-weekday nil)
 
 ;; evil-org
 (add-to-list 'load-path "~/dev/kiwami/submod/evil-org")
