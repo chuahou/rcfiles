@@ -197,6 +197,7 @@ bindsym $mod+Ctrl+space   exec $rofi -show window
 bindsym $mod+Shift+n      exec $filemgr
 bindsym $mod+p            exec $screenshot
 bindsym Print             exec $screenshot
+bindsym $mod+o            exec $terminal -e zsh -c 'org'
 
 # reload i3 config / restart
 bindsym $mod+Shift+r reload
