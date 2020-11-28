@@ -30,10 +30,13 @@
 (require 'evil-org-agenda)
 (evil-org-agenda-set-keys)
 
+;; relative numbers for org mode files only
+(add-hook 'org-mode-hook '(lambda () (setq display-line-numbers 'relative)))
+
 ;; other settings
-(setq-default display-line-numbers 'relative) ;; always show relative numbers
-(menu-bar-mode -1)                            ;; remove menu bar
-(xterm-mouse-mode 1)                          ;; set mouse mode
+(menu-bar-mode -1)                  ;; remove menu bar
+(xterm-mouse-mode 1)                ;; set mouse mode
+(setq-default mode-line-format nil) ;; remove statusline
 (global-set-key (kbd "<mouse-4>") 'scroll-down-line)
 (global-set-key (kbd "<mouse-5>") 'scroll-up-line)
 
