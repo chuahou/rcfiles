@@ -31,6 +31,7 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # user programs
 exec --no-startup-id nm-applet
+exec --no-startup-id blueman-applet
 exec --no-startup-id dropbox start -i
 exec --no-startup-id fcitx
 exec --no-startup-id /usr/lib/x86_64-linux-gnu/polkit-mate/polkit-mate-authentication-agent-1
