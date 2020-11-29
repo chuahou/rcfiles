@@ -20,6 +20,7 @@
 (setq org-link-frame-setup '((file . find-file)))
 (setq org-agenda-span 5)
 (setq org-agenda-start-on-weekday nil)
+(setq org-log-done 'time)
 (setq safe-local-variable-values '((eval org-content 2)))
 
 ;; evil-org
