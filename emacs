@@ -31,9 +31,6 @@
 (require 'evil-org-agenda)
 (evil-org-agenda-set-keys)
 
-;; relative numbers for org mode files only
-(add-hook 'org-mode-hook '(lambda () (setq display-line-numbers 'relative)))
-
 ;; other settings
 (menu-bar-mode -1)                  ;; remove menu bar
 (xterm-mouse-mode 1)                ;; set mouse mode
