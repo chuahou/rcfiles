@@ -96,6 +96,9 @@ client.unfocused        $colour_gray4 $colour_gray1 $colour_gray4 \
 client.urgent           $colour_gray0 $colour_red   $colour_gray7 \
 	$colour_red   $colour_gray0
 
+# float these windows
+for_window [ title="floatthis" ] floating enable
+
 ##### BINDINGS #####
 
 # window navigation
@@ -197,7 +200,7 @@ bindsym $mod+Ctrl+space   exec $rofi -show window
 bindsym $mod+Shift+n      exec $filemgr
 bindsym $mod+p            exec $screenshot
 bindsym Print             exec $screenshot
-bindsym $mod+o            exec $terminal -e zsh -c 'org'
+bindsym $mod+o            exec $terminal -t floatthis -e zsh -c 'org'
 
 # reload i3 config / restart
 bindsym $mod+Shift+r reload
