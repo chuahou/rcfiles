@@ -13,8 +13,8 @@
 (global-set-key (kbd "C-c j") 'org-next-link)
 (global-set-key (kbd "C-c k") 'org-previous-link)
 (global-set-key (kbd "C-c h")
-                (lambda () (interactive)(find-file "~/Dropbox/org/index.org")))
-(setq org-agenda-files '("~/Dropbox/org/"))
+                (lambda () (interactive)(find-file "~/org/index.org")))
+(setq org-agenda-files '("~/org/"))
 (setq org-todo-keywords
       '((sequence "HOLD" "TRIAGE" "TODO" "NEXT" "|" "DONE")))
 (setq org-link-frame-setup '((file . find-file)))

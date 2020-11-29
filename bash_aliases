@@ -76,7 +76,7 @@ alias e="vi"
 
 # emacs
 alias emacs="emacs --color=8"
-alias org="emacs ~/Dropbox/org/index.org"
+alias org="emacs ~/org/index.org"
 
 # vimwiki shortcuts
 alias wiki="e +VimwikiIndex"
