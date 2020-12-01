@@ -201,7 +201,7 @@ bindsym $mod+Ctrl+space   exec $rofi -show window
 bindsym $mod+Shift+n      exec $filemgr
 bindsym $mod+p            exec $screenshot
 bindsym Print             exec $screenshot
-bindsym $mod+o            exec $terminal -t floatthis -e zsh -c 'org'
+bindsym $mod+o            exec $terminal -o background_opacity=0.95 -t floatthis -e zsh -c 'org'
 
 # reload i3 config / restart
 bindsym $mod+Shift+r reload
