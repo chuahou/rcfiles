@@ -166,7 +166,7 @@ format-padding    = 1
 type     = custom/script
 exec     = polybar-msg hook sound_ipc 1
 label    =
-interval = 1
+interval = 10
 
 [module/sound_ipc]
 type              = custom/ipc
