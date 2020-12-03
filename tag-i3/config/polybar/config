@@ -55,7 +55,7 @@ module-margin-left = 1
 enable-ipc         = true
 modules-left       = battery fs fshd mem maxtemp cpu
 modules-center     = i3
-modules-right      = nordvpn sound_ipc sound cpufreq_ipc cpufreq date
+modules-right      = dnd dnd_ipc nordvpn sound_ipc sound cpufreq_ipc cpufreq date
 
 [module/i3]
 ; behaviour
@@ -199,3 +199,17 @@ format-underline  = ${colours.red}
 format-padding    = 1
 interval          = 1
 click-left        = alacritty -e watch -n 2 sensors & disown
+
+[module/dnd]
+type     = custom/script
+exec     = polybar-msg hook dnd_ipc 1
+label    =
+interval = 60
+
+[module/dnd_ipc]
+type              = custom/ipc
+hook-0            = donotdisturb.sh
+click-left        = donotdisturb.sh toggle; polybar-msg hook dnd_ipc 1
+format-background = ${colours.lred}
+format-underline  = ${colours.red}
+format-padding    = 1
