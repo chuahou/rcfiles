@@ -19,9 +19,9 @@ convert "$PIC_PATH"/screen.png -blur 0x15 "$PIC_PATH"/blur.png
 
 # disable notifications, and
 # forward arguments passed to this script to i3lock
-killall -SIGUSR1 dunst
+donotdisturb.sh on
 i3lock --nofork -i "$PIC_PATH"/blur.png "$@"
-killall -SIGUSR2 dunst
+donotdisturb.sh off
 
 # delete pictures
 rm "$PIC_PATH"/screen.png || true

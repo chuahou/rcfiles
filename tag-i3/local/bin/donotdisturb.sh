@@ -17,11 +17,21 @@ get_status () {
 	fi
 }
 
+dnd_on () {
+	killall -SIGUSR1 dunst && touch $DNDPATH
+	polybar-msg hook dnd_ipc 1
+}
+
+dnd_off () {
+	killall -SIGUSR2 dunst && rm $DNDPATH
+	polybar-msg hook dnd_ipc 1
+}
+
 toggle () {
 	if [ -f "$DNDPATH" ]; then
-		killall -SIGUSR2 dunst && rm $DNDPATH
+		dnd_off
 	else
-		killall -SIGUSR1 dunst && touch $DNDPATH
+		dnd_on
 	fi
 }
 
@@ -30,6 +40,8 @@ if [ "$#" -lt 1 ]; then
 else
 	case "$1" in
 		toggle) toggle     ;;
+		on)     dnd_on     ;;
+		off)     dnd_off   ;;
 		*)      get_status ;;
 	esac
 fi
