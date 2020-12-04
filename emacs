@@ -4,6 +4,8 @@
 (setq evil-want-C-i-jump nil) ;; <C-i> prevents <TAB> from working in terminal
 (require 'evil)
 (evil-mode 1)
+(define-key evil-normal-state-map (kbd "C-u") 'evil-scroll-up)
+(define-key evil-visual-state-map (kbd "C-u") 'evil-scroll-up)
 
 ;; org-mode settings
 (require 'org)
@@ -30,6 +32,8 @@
 (evil-org-set-key-theme '(navigation insert textobjects additional calendar))
 (require 'evil-org-agenda)
 (evil-org-agenda-set-keys)
+(evil-define-key 'motion org-agenda-mode-map
+				 (kbd "C-u") 'evil-scroll-up)
 
 ;; other settings
 (menu-bar-mode -1)                  ;; remove menu bar
