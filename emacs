@@ -33,7 +33,7 @@
 (require 'evil-org-agenda)
 (evil-org-agenda-set-keys)
 (evil-define-key 'motion org-agenda-mode-map
-				 (kbd "C-u") 'evil-scroll-up)
+                 (kbd "C-u") 'evil-scroll-up)
 
 ;; other settings
 (menu-bar-mode -1)                  ;; remove menu bar
