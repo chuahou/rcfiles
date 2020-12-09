@@ -55,7 +55,7 @@ module-margin-left = 1
 enable-ipc         = true
 modules-left       = battery fs fshd mem maxtemp cpu
 modules-center     = i3
-modules-right      = dnd dnd_ipc nordvpn sound_ipc sound cpufreq_ipc cpufreq date
+modules-right      = dnd dnd_ipc nordvpn nordvpn_ipc sound_ipc sound cpufreq_ipc cpufreq date
 
 [module/i3]
 ; behaviour
@@ -181,14 +181,20 @@ format-underline  = ${colours.yellow}
 format-padding    = 1
 
 [module/nordvpn]
-type              = custom/script
-exec              = echo vpn $(nordvpn status | sed -n 's/Current server: \([a-z0-9]\+\).nordvpn.com.*$/\1/p')
+type     = custom/script
+exec     = polybar-msg hook nordvpn_ipc 1
+label    =
+interval = 120
+
+[module/nordvpn_ipc]
+type              = custom/ipc
+hook-0            = echo vpn $(nordvpn status | sed -n 's/Current server: \([a-z0-9]\+\).nordvpn.com.*$/\1/p')
 format-background = ${colours.lmagenta}
 format-underline  = ${colours.magenta}
 format-padding    = 1
-click-left        = nordvpn c    2>&1 > /dev/null &
-click-middle      = nordvpn c uk 2>&1 > /dev/null &
-click-right       = nordvpn d    2>&1 > /dev/null &
+click-left        = (nordvpn c   ; polybar-msg hook nordvpn_ipc 1) 2>&1 > /dev/null &
+click-middle      = (nordvpn c uk; polybar-msg hook nordvpn_ipc 1) 2>&1 > /dev/null &
+click-right       = (nordvpn d   ; polybar-msg hook nordvpn_ipc 1) 2>&1 > /dev/null &
 
 [module/maxtemp]
 type              = custom/script
