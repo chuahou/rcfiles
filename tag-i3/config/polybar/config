@@ -186,9 +186,9 @@ exec              = echo vpn $(nordvpn status | sed -n 's/Current server: \([a-z
 format-background = ${colours.lmagenta}
 format-underline  = ${colours.magenta}
 format-padding    = 1
-click-left        = nordvpn c
-click-middle      = nordvpn c uk
-click-right       = nordvpn d
+click-left        = nordvpn c    2>&1 > /dev/null &
+click-middle      = nordvpn c uk 2>&1 > /dev/null &
+click-right       = nordvpn d    2>&1 > /dev/null &
 
 [module/maxtemp]
 type              = custom/script
