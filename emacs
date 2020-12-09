@@ -9,9 +9,7 @@
 
 ;; org-mode settings
 (require 'org)
-(global-set-key (kbd "C-c l") 'org-store-link)
 (global-set-key (kbd "C-c a") 'org-agenda)
-(global-set-key (kbd "C-c c") 'org-capture)
 (global-set-key (kbd "C-c j") 'org-next-link)
 (global-set-key (kbd "C-c k") 'org-previous-link)
 (global-set-key (kbd "C-c h")
