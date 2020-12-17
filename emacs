@@ -43,3 +43,17 @@
 ;; disable autosave/backup files
 (setq auto-save-default nil)
 (setq backup-directory-alist '(("" . "~/.emacs.d/backup")))
+
+;; customize colours
+(set-face-foreground 'link                 "cyan")
+(set-face-foreground 'minibuffer-prompt    "brightred")
+(set-face-foreground 'org-date             "white")
+(set-face-foreground 'org-done             "green")
+(set-face-foreground 'org-level-1          "brightblue")
+(set-face-foreground 'org-level-2          "blue")
+(set-face-foreground 'org-level-3          "magenta")
+(set-face-foreground 'org-link             "cyan")
+(set-face-foreground 'org-meta-line        "red")
+(set-face-foreground 'org-special-keyword  "brightwhite")
+(set-face-foreground 'org-todo             "red")
+(set-face-foreground 'org-verbatim         "white")

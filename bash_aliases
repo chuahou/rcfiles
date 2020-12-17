@@ -75,7 +75,7 @@ fi
 alias e="vi"
 
 # emacs
-alias emacs="emacs --color=8"
+alias emacs="emacs --color=16"
 alias org="emacs ~/org/index.org"
 
 # vimwiki shortcuts
