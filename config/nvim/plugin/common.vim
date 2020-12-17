@@ -88,4 +88,7 @@ augroup commonautocmd
 	" https://vi.stackexchange.com/a/13874
 	autocmd BufWinLeave,BufLeave,BufWritePost ?* nested silent! mkview!
 	autocmd BufWinEnter ?* silent! loadview
+
+	" set nix ft for .nix files
+	autocmd BufRead,BufNewFile *.nix set filetype=nix
 augroup END
