@@ -16,7 +16,14 @@
                 (lambda () (interactive)(find-file "~/org/index.org")))
 (setq org-agenda-files '("~/org/"))
 (setq org-todo-keywords
-      '((sequence "HOLD" "TRIAGE" "TODO" "NEXT" "|" "DONE")))
+      '((sequence "HOLD" "KIV?" "TODO" "NEXT" "|" "DONE")))
+(setq org-todo-keyword-faces
+      '(("HOLD" . (:foreground "yellow"))
+        ("KIV?" . (:foreground "yellow"))
+        ("TODO" . (:foreground "red"       :weight bold))
+        ("NEXT" . (:foreground "brightred" :weight bold :underline t))
+        ("DONE" . (:foreground "green"     :weight bold))))
+(setq org-fontify-done-headline t)
 (setq org-link-frame-setup '((file . find-file)))
 (setq org-agenda-span 14)
 (setq org-agenda-start-on-weekday nil)
