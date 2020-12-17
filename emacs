@@ -39,6 +39,7 @@
 (setq org-agenda-start-on-weekday nil)
 (setq org-log-done 'time)
 (setq safe-local-variable-values '((eval org-content 2)))
+(setq org-startup-indented t)
 
 ;; evil-org
 (add-to-list 'load-path "~/dev/kiwami/submod/evil-org")
