@@ -8,3 +8,7 @@ done
 
 # set PS1
 PS1="\$"
+
+# source nix profile if present
+[ -e $HOME/.nix-profile/etc/profile.d/nix.sh ] && \
+	. $HOME/.nix-profile/etc/profile.d/nix.sh

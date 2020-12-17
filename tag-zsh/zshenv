@@ -13,3 +13,7 @@ export PATH
 # debian packaging variables
 export DEBEMAIL="human+github@chuahou.dev"
 export DEBFULLNAME="Chua Hou"
+
+# source nix profile if present
+[ -e $HOME/.nix-profile/etc/profile.d/nix.sh ] && \
+	. $HOME/.nix-profile/etc/profile.d/nix.sh
