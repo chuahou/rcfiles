@@ -135,3 +135,8 @@ ZSH_AUTOSUGGEST_HISTORY_IGNORE="gpg*"
 ZSH_AUTOSUGGEST_USE_ASYNC="yes" # perform suggestions async
 bindkey '^ ' autosuggest-accept # <C-Space> to accept
 bindkey '^N' autosuggest-accept # vim-esque <C-N> to accept
+
+# evaluate direnv hook if direnv is installed
+if command -v direnv > /dev/null; then
+	eval "$(direnv hook zsh)"
+fi
