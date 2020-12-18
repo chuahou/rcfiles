@@ -44,6 +44,7 @@
 (setq org-log-done 'time)
 (setq safe-local-variable-values '((eval org-content 2)))
 (setq org-startup-indented t)
+(setq org-loop-over-headlines-in-active-region t)
 
 ;; evil-org
 (add-to-list 'load-path "~/dev/kiwami/submod/evil-org")
