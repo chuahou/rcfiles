@@ -71,6 +71,7 @@
 (set-face-foreground 'org-agenda-calendar-event "blue")
 (set-face-foreground 'org-agenda-current-time   "yellow")
 (set-face-foreground 'org-agenda-date           "brightblue")
+(set-face-foreground 'org-agenda-done           "white")
 (set-face-foreground 'org-agenda-structure      "magenta")
 (set-face-foreground 'org-date                  "white")
 (set-face-foreground 'org-headline-done         "white")
