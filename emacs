@@ -37,6 +37,10 @@
 (setq org-link-frame-setup '((file . find-file)))
 (setq org-agenda-span 14)
 (setq org-agenda-start-on-weekday nil)
+(setq org-agenda-time-grid
+      '((daily today require-timed)
+        (800 900 1000 1100 1200 1300 1400 1500 1600 1700 1800 1900 2000 2100 2200)
+        "......" "----------------"))
 (setq org-log-done 'time)
 (setq safe-local-variable-values '((eval org-content 2)))
 (setq org-startup-indented t)
