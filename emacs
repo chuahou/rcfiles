@@ -84,6 +84,7 @@
 (set-face-foreground 'org-level-1               "brightblue")
 (set-face-foreground 'org-level-2               "blue")
 (set-face-foreground 'org-level-3               "color-66")
+(set-face-foreground 'org-level-4               "color-66")
 (set-face-foreground 'org-link                  "cyan")
 (set-face-foreground 'org-meta-line             "red")
 (set-face-foreground 'org-scheduled             'unspecified)
