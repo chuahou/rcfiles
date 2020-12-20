@@ -19,7 +19,7 @@ highlight LineNr ctermfg=Brown ctermbg=none cterm=none
 highlight ColorColumn  ctermfg=none ctermbg=none cterm=none
 highlight CursorColumn ctermfg=none ctermbg=none cterm=none
 highlight FoldColumn   ctermfg=6    ctermbg=none cterm=reverse
-highlight SignColumn   ctermfg=none ctermbg=8    cterm=none
+highlight SignColumn   ctermfg=none ctermbg=none cterm=none
 highlight Folded       ctermfg=7    ctermbg=none cterm=reverse
 
 " Window/tab delimiters
