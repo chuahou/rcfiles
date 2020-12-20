@@ -26,6 +26,9 @@ call plug#begin('~/.local/share/nvim/plugged')
 	" RST Plugins
 	Plug 'Rykka/InstantRst', {'do': 'pip3 install --user https://github.com/Rykka/instant-rst.py/archive/master.zip', 'for': 'rst'}
 	Plug 'ossobv/vim-rst-tables-py3', {'do': 'pip3 install --user vim_bridge3', 'for': 'rst'}
+
+	" git sign column
+	Plug 'airblade/vim-gitgutter'
 call plug#end()
 
 " custom command for aligning by spaces
@@ -79,3 +82,9 @@ let g:airline#extensions#whitespace#skip_indent_check_ft = {
 			\ 'vim': ['trailing'],
 			\ 'vimwiki': ['mixed-indent-file']
 			\ }
+
+" vim-gitgutter configuration
+let g:gitgutter_highlight_linenrs = 1
+
+" faster updates for coc/vim-gitgutter etc
+set updatetime=100
