@@ -83,9 +83,6 @@ let g:airline#extensions#whitespace#skip_indent_check_ft = {
 			\ 'vimwiki': ['mixed-indent-file']
 			\ }
 
-" vim-gitgutter configuration
-let g:gitgutter_highlight_linenrs = 1
-
 " faster updates for coc/vim-gitgutter etc
 set updatetime=100
 
