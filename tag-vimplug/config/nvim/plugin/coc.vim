@@ -13,6 +13,9 @@ set cmdheight=2
 " trigger completion with <C-space>
 inoremap <silent><expr> <C-space> coc#refresh()
 
+" activate actions with <C-space>
+nmap <C-space> :CocAction<CR>
+
 " diagnostics navigation
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
