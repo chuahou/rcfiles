@@ -89,6 +89,7 @@
 (set-face-foreground 'org-meta-line             "red")
 (set-face-foreground 'org-scheduled             'unspecified)
 (set-face-foreground 'org-scheduled-today       'unspecified)
+(set-face-foreground 'org-scheduled-previously  "brightred")
 (set-face-foreground 'org-special-keyword       "brightwhite")
 (set-face-foreground 'org-time-grid             "white")
 (set-face-foreground 'org-verbatim              "white")
