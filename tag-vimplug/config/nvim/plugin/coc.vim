@@ -1,9 +1,3 @@
-" coc configuration
-let g:coc_global_extensions = [
-			\ 'coc-yaml',
-			\ 'coc-json',
-			\ ]
-
 " original example at
 " https://github.com/neoclide/coc.nvim#example-vim-configuration
 
