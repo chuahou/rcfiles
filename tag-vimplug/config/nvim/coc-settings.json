@@ -1,23 +1,25 @@
 {
 	"languageserver": {
 		"haskell": {
-			"command": "haskell-language-server",
+			"command": "haskell-language-server-wrapper",
 			"args": ["--lsp"],
 			"rootPatterns": [
 				"*.cabal",
 				"stack.yaml",
 				"cabal.project",
 				"package.yaml",
-				"shell.nix"
+				"hie.yaml"
 			],
 			"filetypes": [
 				"haskell",
 				"lhaskell"
 			],
 			"initializationOptions": {
-				"languageServerHaskell": {
+				"haskell": {
+					"formattingProvider": "stylish-haskell"
 				}
 			}
 		}
-	}
+	},
+	"coc.preferences.formatOnSaveFiletypes": ["haskell"]
 }
