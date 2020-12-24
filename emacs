@@ -92,6 +92,7 @@
 (set-face-foreground 'org-scheduled-previously  "brightred")
 (set-face-foreground 'org-special-keyword       "brightwhite")
 (set-face-foreground 'org-time-grid             "white")
+(set-face-foreground 'org-upcoming-deadline     "brightred")
 (set-face-foreground 'org-verbatim              "white")
 (set-face-foreground 'org-warning               "brightred")
 (set-face-foreground 'region                    "brightwhite")
