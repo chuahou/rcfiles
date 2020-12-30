@@ -1,0 +1,74 @@
+# dpkgs
+cpufreq-plugin
+firefox-prefs
+fonts-iosevka
+fonts-iosevka-fixed
+fonts-ioslabka
+ly
+oomox-i3ch
+quickdep
+xinit-xsession
+
+# LaTeX
+texlive
+texlive-fonts-extra
+texlive-latex-extra
+texlive-science
+texlive-xetex
+latex-cjk-all
+
+# I can't believe it's not LaTeX! /s
+texmacs
+
+# Fonts
+fonts-materialdesignicons-webfont
+ttf-mscorefonts-installer
+
+# IME
+fcitx-mozc
+mozc-utils-gui
+
+# System
+nautilus-dropbox
+network-manager-gnome
+snapd
+
+# For coc.nvim
+npm
+
+# Ocaml for compilers
+ocaml-nox
+qemu-user
+gcc-arm-linux-gnueabihf
+
+# other sources
+nordvpn
+
+    # user applications #
+    discord
+    emacs-nox
+    gimp #
+    gitg #
+    meld #
+    obs-studio #
+    syncthing #
+    tdesktop #
+    vlc #
+    zathura #
+
+    # rice #
+    picom #
+    polybar #
+    rofi #
+
+    # extra tools #
+    blueman #
+    pandoc #
+    pdftk #
+
+    # others #
+    arandr #
+    hplip #
+    networkmanager-vpnc #
+    nodejs #
+    teams #
