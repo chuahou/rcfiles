@@ -1,8 +1,0 @@
-# This is a list of directories to add to PATH if they exist, relative to $HOME.
-# Lines starting with # should be ignored.
-# May be used by any shell/profile appropriately.
-.local/bin
-bin
-.cargo/bin
-.cabal/bin
-.ghcup/bin
