@@ -1,24 +1,3 @@
-[bar/main]
-modules-right      = dnd dnd_ipc nordvpn nordvpn_ipc sound_ipc sound cpufreq_ipc cpufreq date
-
-[module/sound]
-type     = custom/script
-exec     = polybar-msg hook sound_ipc 1
-label    =
-interval = 10
-
-[module/sound_ipc]
-type              = custom/ipc
-hook-0            = volume.sh
-click-left        = volume.sh sink; polybar-msg hook sound_ipc 1
-click-middle      = volume.sh mute; polybar-msg hook sound_ipc 1
-click-right       = pavucontrol & disown
-scroll-up         = volume.sh volup; polybar-msg hook sound_ipc 1
-scroll-down       = volume.sh voldn; polybar-msg hook sound_ipc 1
-format-background = ${colours.lyellow}
-format-underline  = ${colours.yellow}
-format-padding    = 1
-
 [module/nordvpn]
 type     = custom/script
 exec     = polybar-msg hook nordvpn_ipc 1
@@ -34,17 +13,3 @@ format-padding    = 1
 click-left        = (nordvpn c   ; polybar-msg hook nordvpn_ipc 1) 2>&1 > /dev/null &
 click-middle      = (nordvpn c uk; polybar-msg hook nordvpn_ipc 1) 2>&1 > /dev/null &
 click-right       = (nordvpn d   ; polybar-msg hook nordvpn_ipc 1) 2>&1 > /dev/null &
-
-[module/dnd]
-type     = custom/script
-exec     = polybar-msg hook dnd_ipc 1
-label    =
-interval = 60
-
-[module/dnd_ipc]
-type              = custom/ipc
-hook-0            = donotdisturb.sh
-click-left        = donotdisturb.sh toggle; polybar-msg hook dnd_ipc 1
-format-background = ${colours.lred}
-format-underline  = ${colours.red}
-format-padding    = 1
