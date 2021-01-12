@@ -1,24 +1,11 @@
 ##### CONFIGURATION #####
 
 # applications with options
-set $terminal   --no-startup-id alacritty
-set $browser    firefox
 set $filemgr    nautilus --new-window
-set $screenshot --no-startup-id flameshot gui
-
-# wallpaper
-set $wallpaper $HOME/.config/i3/wallpaper.jpg
 
 ##### STARTUP #####
 
-# appearance
-exec --no-startup-id dunst
-exec_always --no-startup-id feh --bg-fill $wallpaper
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-
 # user programs
-exec --no-startup-id nm-applet
-exec --no-startup-id blueman-applet
 exec --no-startup-id dropbox start -i
 exec --no-startup-id fcitx
 
@@ -30,14 +17,5 @@ exec --no-startup-id $HOME/.config/i3/startup.sh
 ##### BINDINGS #####
 
 # launch applications
-bindsym $mod+Return       exec $terminal
-bindsym $mod+Shift+Return exec $browser
 bindsym $mod+Shift+n      exec $filemgr
-bindsym $mod+p            exec $screenshot
-bindsym Print             exec $screenshot
 bindsym $mod+o            exec $terminal -o background_opacity=0.95 -t floatthis -e zsh -c 'org'
-
-# multimedia controls
-bindsym XF86AudioLowerVolume exec volume.sh voldn && polybar-msg hook sound_ipc 1
-bindsym XF86AudioRaiseVolume exec volume.sh volup && polybar-msg hook sound_ipc 1
-bindsym XF86AudioMute exec volume.sh mute && polybar-msg hook sound_ipc 1

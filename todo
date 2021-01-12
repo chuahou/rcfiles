@@ -1,13 +1,7 @@
 # dpkgs
-cpufreq-plugin
-firefox-prefs
-fonts-iosevka
 fonts-iosevka-fixed
 fonts-ioslabka
-ly
 oomox-i3ch
-quickdep
-xinit-xsession
 
 # LaTeX
 texlive
@@ -24,17 +18,9 @@ texmacs
 fonts-materialdesignicons-webfont
 ttf-mscorefonts-installer
 
-# IME
-fcitx-mozc
-mozc-utils-gui
-
 # System
 nautilus-dropbox
-network-manager-gnome
 snapd
-
-# For coc.nvim
-npm
 
 # Ocaml for compilers
 ocaml-nox
@@ -45,29 +31,11 @@ gcc-arm-linux-gnueabihf
 nordvpn
 
     # user applications #
-    discord
     emacs-nox
-    gimp #
-    gitg #
-    meld #
-    obs-studio #
     syncthing #
-    tdesktop #
-    vlc #
     zathura #
 
-    # rice #
-    picom #
-    polybar #
-    rofi #
-
-    # extra tools #
-    blueman #
-    pandoc #
-    pdftk #
-
     # others #
-    arandr #
     hplip #
     networkmanager-vpnc #
     nodejs #
