@@ -7,12 +7,6 @@ set $filemgr    nautilus --new-window
 
 # user programs
 exec --no-startup-id dropbox start -i
-exec --no-startup-id fcitx
-
-# startup scripts
-exec --no-startup-id $HOME/.config/i3/startup.sh
-
-##### APPEARANCE #####
 
 ##### BINDINGS #####
 

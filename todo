@@ -30,15 +30,12 @@ gcc-arm-linux-gnueabihf
 # other sources
 nordvpn
 
-    # user applications #
-    emacs-nox
-    syncthing #
+# user applications #
+emacs-nox
+syncthing #
 
-    # others #
-    hplip #
-    networkmanager-vpnc #
-    nodejs #
-    teams #
-
-# kiwami
-spotify
+# others #
+hplip #
+networkmanager-vpnc #
+nodejs #
+teams #
