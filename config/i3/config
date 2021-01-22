@@ -5,11 +5,7 @@ set $filemgr    nautilus --new-window
 
 ##### STARTUP #####
 
-# user programs
-exec --no-startup-id dropbox start -i
-
 ##### BINDINGS #####
 
 # launch applications
 bindsym $mod+Shift+n      exec $filemgr
-bindsym $mod+o            exec $terminal -o background_opacity=0.95 -t floatthis -e zsh -c 'org'
