@@ -2,6 +2,8 @@
 rcfiles
 #######
 
+**Succeeded by** `NixOS configuration <https://github.com/chuahou/conf.nix>`_.
+
 Contains my rcfiles / dotfiles, to be managed with `rcm
 <https://github.com/thoughtbot/rcm>`_.
 
